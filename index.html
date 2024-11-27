@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checklist Guide</title>
+    <style>
+      /* Overall styling mimics Old School RuneScape */
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: #2a2a2a;
+        color: #e0c489;
+        margin: 0;
+        padding: 0;
+      }
+
+      #checklist-container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 3px solid #6b4710;
+        background-color: #3a3a3a;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+      }
+
+      h1 {
+        text-align: center;
+        font-family: 'Georgia', serif;
+        color: #f5da72;
+        margin-top: 10px;
+        text-shadow: 1px 1px 2px black;
+      }
+
+      .attribution {
+        text-align: center;
+        margin-top: -10px;
+        margin-bottom: 20px;
+        font-size: 0.9em;
+        color: #f7d88a;
+        text-shadow: 1px 1px 1px black;
+      }
+
+      .attribution a {
+        color: #f5da72;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .attribution a:hover {
+        color: #ffdf87;
+        text-decoration: underline;
+      }
+
+      .section {
+        margin-bottom: 20px;
+        border: 2px solid #6b4710;
+        border-radius: 5px;
+        padding: 10px;
+        background-color: #4a4a4a;
+      }
+
+      .section-title {
+        font-weight: bold;
+        font-size: 1.3em;
+        margin-bottom: 10px;
+        text-align: center;
+        color: #f7d88a;
+        text-shadow: 1px 1px 2px black;
+      }
+
+      .step {
+        margin-bottom: 10px;
+      }
+
+      .step label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .step input[type='checkbox'] {
+        margin-right: 10px;
+        transform: scale(1.2);
+      }
+
+      label:hover {
+        color: #f7d88a;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Leagues V Starting Route</h1>
+    <div class="attribution">
+      Guide created by
+      <a href="https://x.com/maz_rs" target="_blank">@maz_rs</a>. Check out
+      their <a href="https://Twitch.tv/mazhar" target="_blank">Twitch</a> for
+      more!
+      <br />
+      <small>
+        Checklist page created by
+        <a href="https://github.com/cfitzsimons" target="_blank">Yulfy</a> .
+      </small>
+    </div>
+    <div id="checklist-container"></div>
+    <script>
+      const checklistData = [
+        {
+          section: 'LUMBRIDGE AREA',
+          steps: [
+            'complete the leagues tutorial [10] (10)',
+            'open the leagues menu [10] (20)',
+            'PICK HARPOON GANG',
+            'turn on thick skin prayer',
+            '***IF we dont spawn with a dramen staff, get it from the leagues tutor***',
+            'Look for hans roaming in the area and talk to him [10] (30)',
+            'run to the mage tutor, drop runes -> claim free runes -> reloot',
+            'run to the general store',
+            'sell bow, net, bronze sword, shield, dagger to the shop',
+            'buy 1 knife, 1 sheers, 2 MORE buckets and 1 MORE pot',
+            'go to the pub east and buy 2 beers (option 1)',
+            'run north to sheep sheerer area and kill chicken with fist [10] (40)',
+            'loot the raw chicken and bury the bones [10] (50)',
+            'run south to onion field, pick three, eat one [10] *** SKIP IF YOU HAVE TO WAIT FOR RESPAWN (60)',
+            'loot egg from chicken pen or from coop if spawn is missing',
+            'grab wheat from the pen to the west',
+            'use cry emote while in wheat field [10] (70)',
+            'run west and spam click the haystack until you get a needle [30] (100)',
+            'run north and make flour at the windmill [30] (130)',
+            'go north to the cown pen and milk TWO cows [10] (140)',
+            'go west and cut any tree [10] (150)',
+            'use knife on log and make arrow shafts [10] (160)',
+            'cut and burn a log [10] (170)',
+            'do 10 laps of draynor agility and loot the mark of grace',
+            'do 1 draynor agility lap [10] (180)',
+            'obtain a mark of grace [30] (210)',
+            '10 draynor agility laps [30] (240)',
+            'first level up [10] (250)',
+            'first level 5 [10] (260)',
+            'first level 10 [10] (270)',
+            'first level 20 [10] (280)',
+            'start vampyre slayer and get a garlic upstairs',
+            'bank everything but coins + 1 beer + dramen staff + air runes + mind runes + raw chicken + flour + eggs + milk',
+            'buy 4 barley seeds from the farming shop',
+            'run to fortunado and buy wines',
+            'cast home teleport [10] (290)',
+            'pray at the altar [10] (300)',
+            'run to bob and ask for a quest (option 1) [10] (310)',
+            'run to the graveyard and dance emote [10] (320)',
+            'enter and exit deaths domain [10] (330)',
+            'talk to count check and get teleported to the stronghold'
+          ]
+        },
+        {
+          section: 'BARB VILLAGE',
+          steps: [
+            'run into the stronghold and kill a goblin [10] + [10] (350)',
+            'continue through the stronghold and kill a rat in any room along the way [10] (360)',
+            'complete the entire stronghold until the end for 10k + fancy boots [30] (390)',
+            'go upstairs and leave the stronghold',
+            'kill a barbarian and keep bones [10] (400)',
+            'buy a steel full helm',
+            'run north into the longhall and drink beer while inside [10] (410)',
+            'leagues teleport back to lumbridge'
+          ]
+        },
+        {
+          section: 'lumbridge',
+          steps: [
+            'buy 200 fishing bait from general store',
+            'run to the cook in lumby castle and finish cooks assistant',
+            'cook the chicken on the range [30] (440)',
+            'cook again to burn the chicken (MIGHT NOT WORK?) [10] (450) ** SKIP IF DOESNT WORK',
+            'run to lumbridge swamp dungeon enterance and buy a candle for 1k [30] (480)',
+            '** KILL A FROG FOR 10 POINTS IF MIND RUNES FOR 10 POINTS, if not improvise this in later',
+            'run and enter zanaris [10] (490)',
+            'run to chaeldar and buy a gem and spiny helmet',
+            'get a slayer task and check it with the gem [10] (500)',
+            'use the fairy ring to get to DKR  [10] (510)'
+          ]
+        },
+        {
+          section: 'VARROCK AREA',
+          steps: [
+            'run south to gertrude and buy a cat',
+            'stroke the kitten (can pick up after) [10] (520)',
+            'bank everything and take out 4 barley seeds, axe, knife, tinderbox, coins, pickaxe, beer, sheers, bucket, bones in varrock west (10 items)',
+            'PET A STRAY DOG ON THE WAY TO THE NEXT STEPS + GIVE IT BONES (diary) [10] (530)',
+            'run to zaff and buy a air staff and equip it [10] (540)',
+            'start quest helper for demon slayer',
+            'talk to the aris to start demon slayer south (option 1, 2, 3, 4)',
+            'buy a hammer from the general store',
+            'buy red cape from thesselias shop  (diary)',
+            'buy a newspaper from benny (diary)',
+            'run north to varrock castle and talk to sir prysin (3,1,2,2)',
+            'go nw and talk to captain rovin (3,1,2,2,3,1)',
+            'fill bucket with water and use on drain to the east',
+            'exit the castle to the east',
+            'buy a poh [10] (550)',
+            'run to hairdresser and get a haircut [10] (560)',
+            'run south to aubury and buy 100 mind runes + 50  fire/water/earth',
+            'teleport to essence mine (diary) [10] (570)',
+            'mine 1 essence and exit [10] (580)',
+            'go to the house west (daddys home house) and use the steel helm on the hat stand [10] (590)',
+            'kill a mugger [10] (600)',
+            'upset a tramp (option 2) [10] (610)',
+            'run sw and pick a cabbage [10] (620)',
+            'talk to dr harlow TWICE at the blue moon inn (option 2)',
+            'go to sword shop and buy an iron + mith + addy dagger',
+            'equip iron dagger [10] (630)',
+            'go south and kill a dark wizard [10] (640)',
+            'run east and wc + fm until 15 wc. fm until 15 then fletch rest into shafts',
+            'run east and pick 3 redberries',
+            'run into the pen sw and sheer a sheep',
+            'kill a ram [10] (650)',
+            'jump over the fence to the south (diary)',
+            'buy a rake + 4 compost + seed dibber from the hops farmer',
+            'rake the patch [10] (660)',
+            'use compost on patch for 3 farming',
+            'plant the barley seeds and pay the farmer for protection [10] (670)',
+            'run into potato field se and cut the oak tree [10] (680)',
+            'burn the oak log [10] (690)',
+            '== karamja====',
+            'leagues tele to karamja',
+            'enter your house in construction mode (if task isnt granted, go in non-construction mode after) [10] (700)',
+            'build a room for 1k [30] (730)',
+            'leagues tele to lumbridge'
+          ]
+        },
+        {
+          section: 'LUMBRIDGE AGAIN',
+          steps: [
+            'misthalin league teleport back to lumby',
+            'fire strike a duck in the river [10] (740)',
+            'take the north staircase [10] (750)',
+            'talk to the duke and get an anti dragon shield',
+            'spin a ball of wool [10] (760)',
+            'go go upstairs and clear inventory aside from cape, 3 redberries, and 2 onions, air staff,  mind runes + water + earth + fire',
+            '***** YOU SHOULD NOW BE 750 POINTS, IF THIS IS TIER 2, PICK THIEF RELIC, you now have 8x xp *****',
+            'TIER 2',
+            'pickpocket the man until 15 thief [10] (770)',
+            'open 28 coin pouches at once [30] (800)',
+            'go to the ham hideout and thief until all are met: 38 thieving, grimy guam, steel pickaxe, steel axe [30] (830)',
+            'clean a grimy guam [30] (860)',
+            '****** IF YOU DID NOT GET ONIONS EARLIER, CHECK THE FIELD NOW, OTHERWISE SKIP AGGIE',
+            'run west to draynor and use redberries and onion on aggie to get dyes',
+            'combine the red and yellow dye for orange dye and use on the cape [10] (870)',
+            'buy a chronicle and 4 pages',
+            'thieve a master farmer [30] (900)',
+            'teleport with chronicle and run to the thief stall in varrock on the east side',
+            'steal From the Varrock Tea Stall [10] (910)',
+            'go to elsie upstairs in the varrock church and use tea on her [10] (920)',
+            'go north and do the varrock museum quiz [10] (930)',
+            'go upstairs and talk to historian minas for 5 kudos',
+            '******* YOU CAN UNLOCK FIRST REGION NOW, DO NOT TALK TO MINAS AGAIN UNTIL YOU WANT XP LAMPS *********',
+            'get rock pick trowel leather gloves boots from the wall in finds room',
+            'clean finds until you get 2 unique ones, this gets 51+ kudos',
+            'speak to haig halen (dairy)',
+            'speak to the information clerk in the nw corner for 8k mining xp',
+            'run west into varrock castle and kill a guard [10] (940)',
+            'thieve guards until 27 coin pouches [30] (970)',
+            'open the coin pouches giving over 800 extra gp [30] (1000)',
+            'go to v west bank and bank everything but runes, axe, fishing bait, echo harpoon, spiny helm, steel helm, and coins',
+            'leagues tele to karamja',
+            'pick a pineapple south [10] (1010)',
+            'kill a snake  [10] (1020)',
+            'enter the brimhaven dungeon [30] (1050)',
+            'run west past stepping stones',
+            'kill a moss giant ON DEFENSIVE *FIRE WEAKNESS* (UNLOCKS FIRST COMBAT MASTERY + 95% RUNE/AMMO SAVE) [10] (1060)',
+            'go upstairs and kill a greater demon *WATER WEAKNESS* [30] (1090)',
+            'should be 5 def so wear spiny + steel helm [10] + [10] (1110)',
+            'loot and scatter its ashes [10] (1120)',
+            'leagues tele to karamja',
+            'run north and buy 11 bananas [10] (1130)',
+            'eat a banana [10] (1140)',
+            'run east to volcano and kill an imp with earth strike[10] (1150)',
+            'go down volcano and kill a lesser demon *WATER WEAKNESS* [30] (1180)',
+            'go to tzhaars and kill one [30] (1210)',
+            'go into fight caves and leave AFTER wave 1 pops up (diary)',
+            'run to musa point east and fill crate with bananas [10] (1220)',
+            'pick 5 bananas while you can while fishing for diary (can drop)',
+            'go fish at musa point for levels, stay until you finish the following',
+            'catch a shrimp [10] (1230)',
+            'cook a shrimp [10] (1240)',
+            'cook 5 in a row [30] (1270)',
+            'catch an anchovy [10] (1280)',
+            'catch 25 sardines [30] (1310)',
+            'cook 10 sardines [30]  (1340)',
+            'cook 100 lobsters [30] (1370)',
+            'catch a herring [10] (1380)',
+            'catch 100 lobsters [30] (1410)',
+            'catch 50 swordfish [30] (1440)',
+            'first level 30 [30] (1470)',
+            'first level 40 [30] (1500)',
+            '*** UNLOCK CLUE COMPASS ****',
+            'first level 50 [30] (1530)',
+            'Reach Total Level 100 [30] (1560)',
+            'clue compass to shilo village bank',
+            'buy a torch + tinderbox from general store and light it [10] (1570)',
+            'IF GP IS NEEDED TAKE STEEL ITEMS FROM HAM MEMBERS (should be noted) OUT OF BANK AND SELL, OR SELL SPARE FISH',
+            'buy and bank 25 bronze bars',
+            'go to fishing shop and buy 200 feathers, if need more gp take the banked raw food out of bank and sell it to shop',
+            'do the following fish tasks',
+            'catch 10 pike [30] (1600)',
+            'catch a Salmon on karamja [30] (1630)',
+            'catch 50 salmon [30] (1660)',
+            'cook 20 pike [30] (1690)',
+            'sell more fish to general store for gp',
+            'bank everything but steel axe, coins, leather gloves, learther boots, rock pick, trowel, combat runes, hammer, stake, garlic. mith dagger, addy dagger + clue compass relic if achieved at this point',
+            'go north of the river and go upstairs at the bar and buy a nights rest (options 1, 1, 3) then go upstairs [30] (1720)',
+            'clue compass teleport to lumberyard',
+            'cut a tree with a steel axe [10] (1730)',
+            'and make it into a plank [10] (1740)',
+            'clue compass to the exam centre (KEYBIND R) and get a specimen jar from the cupboard on the south wall',
+            'clue compass to digsite (KEYBIND Q) and get a panning tray and pan jade [10] (1750)',
+            'dig the farthest north spot until belt buckle',
+            'clue compass back to exam centre (KEYBIND R) and use belt buckle on terry [30] (1780)',
+            'clue compass back to digsite (KEYBIND Q)',
+            'go to fossil island [10] (1790)',
+            'pet the dog in the bank area [10] (1800)',
+            'clue compass to draynor manor (KEYBIND S) and enter draynor manor',
+            'get a chair to follow you [10] (1810)',
+            'complete vampyre slayer [30] (1840)',
+            'equip mith + addy dagger [30] + [30] (1900)',
+            'achieve 10 combat [10] (1910)',
+            'leagues teleport to lumbridge',
+            'run into basement and kill a spider by kicking it [10] (1920)',
+            'bank for a candle and tinderbox',
+            'travel to dorgesh khaan and enter the city',
+            'pickpocket a cave goblin until bullseye lantern [30] (1950)',
+            'clue compass to varrock gypsy',
+            'go to west bank and train smithing using the bronze bars to level up and do the following',
+            'smith a bronze full helm [10] (1960)',
+            'smith a bronze plateskirt [10] (1970)',
+            'should hit 250 total by this point [30] (2000)',
+            'stash to edgeville (KEYBIND X) and run to soulwars portal',
+            'take out steel pickaxe from ham MEMBERS + harpoon +  dramen staff + air staff + mind runes and run south to soulwars mine',
+            'mine something with steel pickaxe [10] (2010)',
+            'mine some copper ore [10] (2020)',
+            'mine 5 tin ore [10] (2030)',
+            'mine iron ore until 50 ore [30] (2050)',
+            'mine 15 coal [30] (2080)',
+            'finish off 40 mining with iron ore',
+            'clue compass to enchanted valley and then fairy ring to bjp',
+            'run far west and pick up bird snare',
+            'run west and kill 5 rabbits [30] (2110)',
+            'catch a copper longtail south east [10] (2120)',
+            'leagues teleport to karamja and  run west',
+            'mine some gold ore (diary)',
+            'use the rope swing (diary)',
+            'clue compass to enchanted valley',
+            'fiary ring to CKR fish 1 karambwanji [10] (2120)',
+            'run west and pick up/drop seaweed 5 times (dairy)',
+            'and cross to cairn island (dairy)',
+            'clue compass to Tai bwo wannai and go to the dungeon to the north and kill a jogre (diary)',
+            'league teleport to karamja and claim diary lamp on prayer for 16k prayer xp and 32 prayer [30] (2160)',
+            'achieve 25 combat [10] (2170)',
+            'activate prayer and let it drain',
+            'clue compass to varrock gypsy',
+            'IF FREMENIK FIRST, OTHERWISE SKIP:',
+            'go to varrock museum upstairs and IF fremmy claim lamps and dump it on prayer (1k + 5k xp) = (6k * 16 = 96k) -> 51 prayer',
+            'turn on super human str and improved reflexes [10] (2180)',
+            'Use the Protect from Melee Prayer [30] (2210)',
+            'pray at the church above to restore over 5 prayer [10] (2220)',
+            '44 mediums 90 easy = 134 tasks and 2,220 points'
+          ]
+        }
+      ]
+
+      const checklistContainer = document.getElementById('checklist-container')
+
+      function loadChecklist() {
+        checklistData.forEach((section, sectionIndex) => {
+          const sectionDiv = document.createElement('div')
+          sectionDiv.className = 'section'
+
+          const sectionTitle = document.createElement('div')
+          sectionTitle.className = 'section-title'
+          sectionTitle.textContent = section.section
+          sectionDiv.appendChild(sectionTitle)
+
+          section.steps.forEach((step, stepIndex) => {
+            const stepDiv = document.createElement('div')
+            stepDiv.className = 'step'
+
+            const label = document.createElement('label')
+            const checkbox = document.createElement('input')
+            checkbox.type = 'checkbox'
+
+            const storageKey = `section-${sectionIndex}-step-${stepIndex}`
+            checkbox.checked = JSON.parse(
+              localStorage.getItem(storageKey) || 'false'
+            )
+            checkbox.addEventListener('change', () => {
+              localStorage.setItem(storageKey, checkbox.checked)
+            })
+
+            const stepText = document.createTextNode(step)
+
+            label.appendChild(checkbox)
+            label.appendChild(stepText)
+            stepDiv.appendChild(label)
+            sectionDiv.appendChild(stepDiv)
+          })
+
+          checklistContainer.appendChild(sectionDiv)
+        })
+      }
+
+      loadChecklist()
+    </script>
+  </body>
+</html>
